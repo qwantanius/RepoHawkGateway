@@ -1,0 +1,24 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type RepositoryOwner {
+  login: String!
+  id: Float!
+}
+
+type Repository {
+  id: Float!
+  name: String!
+  totalSize: String!
+  owner: RepositoryOwner!
+  isPrivate: Boolean!
+  numberOfFiles: Float!
+  ymlFileName: String
+  ymlFileContent: String
+  activeWebhooks: [String!]!
+}
+
+type Query {
+  repositoryDetails(apiToken: String!, adapterToken: String!): [Repository!]!
+}
